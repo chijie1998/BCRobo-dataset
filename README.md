@@ -36,15 +36,38 @@ The RGB and annotated ground truth images are available for download [here].
 
 Lidar and GPS data are also available in the form of ROSbag upon request.
 
-### Wiring with Arduino Uno or other microcontroller
-Please refer to connection of Teensy 4.1, just connect the wires according to your microcontroller SPI pins. 
+### Benchmark
+First, we have partitioned our dataset into train (80%), test (10%) and validation set (10%). Split text file is available [here](docs/splits).
+In order to evaluate our dataset, we have selected **3 image segmentation models** and trained with our dataset:
 
-Please becareful of the voltage if you are using Arduino Uno, you need to step down the voltage on the SPI lines and input voltage to 3.3V as the IMU is running at 3.3V. 
+1. [PSPnet](https://arxiv.org/pdf/1612.01105.pdf)   – ResNet50 – d8 backbone
+2. [OCRnet](https://arxiv.org/pdf/1909.11065.pdf)   – ResNet50 – d8 backbone
+3. [UPerNet](https://arxiv.org/pdf/1807.10221.pdf)  – ResNet50
 
-### Kalman Filter
-Modify Kalman Filter from [Osoyoo](https://github.com/osoyoo/Osoyoo-development-kits/tree/master/OSOYOO%202WD%20Balance%20Car%20Robot) to be compatible with this library to obtain tilted angle from IMU data. 
+##### Training Environment:
+-	Ubuntu LTS 20.04
+-	AMD Ryzen Threadripper 3960X 24-Core
+-	Nvidia RTX 3090 – 3 units
+-	[MMSegmentation v0.29.1](https://github.com/open-mmlab/mmsegmentation)
 
-### Installation 
+##### Training Configuration:
+- SGD optimizer with momentum of 0.9
+- Polynomial learning rate policy with weight decay of 0.0004
+- Learning rate of 0.015 and min learning rate of 0.0001
+- Linear warm up for 1000 iteration
+- Train based on Epoches for 2000 epoches (around 60000 iterations)
+- 6 images per GPU (batch size = 6 x 3)
+- 8 workers per GPU
+
+##### Experimental Evaluation:
+
+We evaluate the test+val sets as well as train+test+val sets with the trained models with standard semantic segmentation metrics which are mean Intersection-over-Union (**mIoU**) and mean pixel-wise classification accuracy (**mAcc**). 
+
+
+![alt text](images/result.png)
+
+
+### Reproduce benchmark
 1. Download Arduino IDE and Teensyduino following this [official guide](https://www.pjrc.com/teensy/td_download.html). If you are not using teensy you may ignore this, you only need the arduino IDE. 
 
 2. Find your Arduino folder usually located at Home. Download and put the ICM42688 and KalmanFilter folder in Arduino/libraries.
@@ -53,19 +76,19 @@ Modify Kalman Filter from [Osoyoo](https://github.com/osoyoo/Osoyoo-development-
 
 4. You may follow the guide from [Arduino](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries) too if step 2 and 3 does not work for you.
 
-### Available Functions 
-![alt text](docs/images/function.jpg)
-
-You may refer to the Example and readme on how to call and use the functions.
-
-librarytest.ino demonstrates on how to use the basic functions to initialize and get gyro and accel data to compute tilted angle using Kalman Filter. 
-
-IMUandKalman.ino demonstrated on how to use interrupt in Teensy to get IMU data every 50ms and print on serial monitor. 
+### Cite us
+Please cite this paper if you have used this dataset in your work
 
 ### Credit and References
 
-[ICM42688 datasheet](https://datasheet.octopart.com/ICM-42688-P-InvenSense-datasheet-140604332.pdf)
+[KITTI](https://www.cvlibs.net/publications/Geiger2013IJRR.pdf) 
 
-[Mikroe Libraries](https://www.mikroe.com/6dof-imu-14-click)
+[RUGD](http://rugd.vision/)
 
-[ICM20948 Arduino Libraries](https://github.com/dtornqvist/icm-20948-arduino-library)
+[PSPnet](https://arxiv.org/pdf/1612.01105.pdf)   
+
+[OCRnet](https://arxiv.org/pdf/1909.11065.pdf)   
+
+[UPerNet](https://arxiv.org/pdf/1807.10221.pdf)  
+
+[MMSegmentation](https://github.com/open-mmlab/mmsegmentation)
