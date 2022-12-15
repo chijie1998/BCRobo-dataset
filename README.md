@@ -81,6 +81,8 @@ Please cite this paper if you have used this dataset in your work
 
 ### Credit and References
 
+Everyone involves in this project in Hayashi Eiji Laboratory Kyutech Japan.
+
 [KITTI](https://www.cvlibs.net/publications/Geiger2013IJRR.pdf) 
 
 [RUGD](http://rugd.vision/)
