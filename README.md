@@ -14,7 +14,7 @@ As part of the development team for SOMA, we are trying to implement our robot i
 ### Class and Labels
 The labels of this dataset is adapted from [KITTI](https://www.cvlibs.net/publications/Geiger2013IJRR.pdf) and [RUGD](http://rugd.vision/) dataset. 
 
-There is a total of 22 classes but in the labels.txt file, we keep two extra classes (asphalt and picnic-table) as we wish to train it with RUGD dataset.
+There is a total of 22 classes but in the [labels.txt](docs/labels.txt) file, we keep two extra classes (asphalt and picnic-table) as we wish to train it with RUGD dataset.
 
 
 ![alt text](images/pixel_percentage.png)
