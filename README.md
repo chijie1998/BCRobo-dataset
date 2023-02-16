@@ -1,7 +1,7 @@
 # The BCRobo dataset for Robotic Vision and Autonomous Path Planning in Outdoor Beach Environment
 ***Author:*** Sam Tan Chi Jie (chijie1998@hotmail.com/ tan.jie-chi339@mail.kyutech.jp)
 
-BCRobo dataset is a highly specialized ***beach dataset*** that contains 685 high resolution beach environment images captured by a field exploration robot, SOMA.
+BCRobo dataset is a highly specialized **beach dataset** that contains 685 high resolution beach environment images captured by a field exploration robot, SOMA.
 
 [SOMA](https://alife-robotics.co.jp/members2020/icarob/data/html/data/OS/OS23/OS23-5.pdf).
 
