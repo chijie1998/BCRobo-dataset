@@ -68,13 +68,16 @@ We evaluate the test+val sets as well as train+test+val sets with the trained mo
 
 
 ### Reproduce benchmark
-1. Download Arduino IDE and Teensyduino following this [official guide](https://www.pjrc.com/teensy/td_download.html). If you are not using teensy you may ignore this, you only need the arduino IDE. 
+1. Install MMsegmentation and create new custom dataset for BCRobo following this [guide](https://mmsegmentation.readthedocs.io/en/latest/tutorials/customize_datasets.html) while refering to this file.
 
-2. Find your Arduino folder usually located at Home. Download and put the ICM42688 and KalmanFilter folder in Arduino/libraries.
+2. Before training, run demo.py to convert annotated image to semantic segmentation map image and run resize.py to change from jpg to png.
 
-3. Open Arduino IDE, select Sketch and include libraries. You should be able to see and choose ICM42688 and KalmanFilter.
+3. Run BCrobotmodel.py to create txt lists for training/testing/validation
 
-4. You may follow the guide from [Arduino](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries) too if step 2 and 3 does not work for you.
+4. To train, run this command CUDA_VISIBLE_DEVICES=0,1,2 ./tools/dist_train.sh ./configs/rugd/rugdconfig.py 3 
+    Depending on your number of GPU, change CUDA_VISIBLE_DEVICES and 3 accordingly. Change the path to your config file directory. 
+    
+5. To test the trained model,  run the following command python3 tools/test.py ./configs/rugd/rugdconfig_upnet.py {your mmsegmentation directory}/work_dirs/{your trained modoel}/epoch_1600.pth --out result.pkl --eval mIoU
 
 ### Cite us
 Please cite this paper if you have used this dataset in your work
