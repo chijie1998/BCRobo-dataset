@@ -81,6 +81,7 @@ We evaluate the test+val sets as well as train+test+val sets with the trained mo
 
 ### Cite us
 Please cite this paper if you have used this dataset in your work
+
 ©The 2023 International Conference on Artificial Life and Robotics (ICAROB2023), Feb. 9 to 12, Oita, Japan
 
 The BCRobo dataset for Robotic Vision and Autonomous Path Planning in Outdoor Beach Environment
