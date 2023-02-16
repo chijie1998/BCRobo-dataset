@@ -68,7 +68,7 @@ We evaluate the test+val sets as well as train+test+val sets with the trained mo
 
 
 ### Reproduce benchmark
-1. Install MMsegmentation and create new custom dataset for BCRobo following this [guide](https://mmsegmentation.readthedocs.io/en/latest/tutorials/customize_datasets.html) while refering to this file.
+1. Install [MMsegmentation](https://github.com/open-mmlab/mmsegmentation) and create new custom dataset for BCRobo following this [guide](https://mmsegmentation.readthedocs.io/en/latest/tutorials/customize_datasets.html) while refering to this file.
 
 2. Before training, run demo.py to convert annotated image to semantic segmentation map image and run resize.py to change from jpg to png.
 
