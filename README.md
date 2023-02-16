@@ -32,7 +32,7 @@ There is a total of 22 classes but in the [labels.txt](docs/labels.txt) file, we
     │   ├── anno        
     └── ...
     
-The RGB and annotated ground truth images are available for download [here](https://drive.google.com/drive/folders/1SKHQY3v3CCEncz6IfXQfFmhwAAZ1S_fJ?usp=share_link).
+The RGB and annotated ground truth images are available for download [here](https://drive.google.com/drive/folders/1SKHQY3v3CCEncz6IfXQfFmhwAAZ1S_fJ?usp=sharing).
 
 Lidar and GPS data are also available in the form of ROSbag upon request.
 
