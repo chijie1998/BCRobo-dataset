@@ -79,6 +79,12 @@ We evaluate the test+val sets as well as train+test+val sets with the trained mo
     
 5. To test the trained model,  run the following command python3 tools/test.py ./configs/rugd/rugdconfig_upnet.py {your mmsegmentation directory}/work_dirs/{your trained modoel}/epoch_1600.pth --out result.pkl --eval mIoU
 
+##### Synthetic Dataset:
+
+Added Synthetic Dataset and evaluation of the effeciency of image segmentation modal trained with synthetic dataset.
+
+![alt text](images/synthetic_sample.png)
+
 ### Cite us
 Please cite this paper if you have used this dataset in your work
 
