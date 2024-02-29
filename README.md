@@ -1,7 +1,7 @@
 # The BCRobo dataset for Robotic Vision and Autonomous Path Planning in Outdoor Beach Environment
 ***Author:*** Sam Tan Chi Jie (chijie1998@hotmail.com/ tan.jie-chi339@mail.kyutech.jp)
 
-BCRobo dataset is a highly specialized **beach dataset** that contains 685 high resolution real beach environment images captured by a field exploration robot, SOMA and 192 images captured in a synthetic beach environment.
+[BCRobo dataset](https://zenodo.org/records/10725722?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY1MTg4M2ExLWNkODEtNDU0Yy1hNDYxLWZiNTFkNzU0OGIzZSIsImRhdGEiOnt9LCJyYW5kb20iOiIwODU4MzJkNTM2MjBlM2IwYzBhYmUwODM2MTY3MzljZSJ9.I8Jj1AaA1i-dlTJEoUfmZ1W08T4hyghv3WL_t6KEuzL0wYsfRYdukbJyeMM_kIjqyiQYqSW9Tz-6SuDYrCXa-A) is a highly specialized **beach dataset** that contains 685 high resolution real beach environment images captured by a field exploration robot, SOMA and 192 images captured in a synthetic beach environment.
 
 [SOMA](https://alife-robotics.co.jp/members2020/icarob/data/html/data/OS/OS23/OS23-5.pdf).
 
@@ -35,7 +35,7 @@ There is a total of 22 classes but in the [labels.txt](docs/labels.txt) file, we
     │   ├── anno  
     └── ...
     
-The RGB and annotated ground truth images are available for download [here](https://drive.google.com/drive/folders/1SKHQY3v3CCEncz6IfXQfFmhwAAZ1S_fJ?usp=sharing).
+The RGB and annotated ground truth images are available for download [here](https://drive.google.com/drive/folders/1SKHQY3v3CCEncz6IfXQfFmhwAAZ1S_fJ?usp=sharing) or [here](https://zenodo.org/records/10725722?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY1MTg4M2ExLWNkODEtNDU0Yy1hNDYxLWZiNTFkNzU0OGIzZSIsImRhdGEiOnt9LCJyYW5kb20iOiIwODU4MzJkNTM2MjBlM2IwYzBhYmUwODM2MTY3MzljZSJ9.I8Jj1AaA1i-dlTJEoUfmZ1W08T4hyghv3WL_t6KEuzL0wYsfRYdukbJyeMM_kIjqyiQYqSW9Tz-6SuDYrCXa-A).
 
 Lidar and GPS data are also available in the form of ROSbag upon request.
 
