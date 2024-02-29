@@ -88,6 +88,12 @@ The BCRobo dataset for Robotic Vision and Autonomous Path Planning in Outdoor Be
 
 Tan Chi Jie,Takumi Tomokawa, Sylvain Geiser, Shintaro Ogawa, Ayumu Tominaga, Sakmongkon Chumkamon, Eiji Hayashi
 
+©Journal of Advances in Artificial Life Robotics ,volume 3, no. 4 p. 224-229
+
+A real and synthetic dataset for Robotic Vision in Outdoor Beach Environment – BCRobo
+
+Tan Chi Jie,Takumi Tomokawa, Shintaro Ogawa, Ayumu Tominaga, Sakmongkon Chumkamon, Eiji Hayashi
+
 ### Credit and References
 
 Everyone involves in this project in Hayashi Eiji Laboratory Kyutech Japan.
